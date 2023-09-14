@@ -6,7 +6,7 @@ clear
 clc
 close all
 
-%These variables are input for Main_sfaraData.m
+%These variables are input for Main.m
 start=1000;
 cutoff=2425;
 car="Accord_Front_"; %Change depending on car name
