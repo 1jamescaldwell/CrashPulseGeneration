@@ -1,16 +1,16 @@
-%% Script for 2022 Sfara Testing 
+%% Script for 2022 Car Testing 
 % 7/25/22 James Caldwell, UVA
 
 % Creates graphs and scaled versions of run data
 % Runs with cfc.m (from JP) in workspace folder with the Signal Processing Toolbox for Matlab installed
 
 % Run script such as AccordFront.m before this one
-%        Located here: \\cab-fs07.mae.virginia.edu\NewData\Driversiti\1CustomCode\Sfara 2022 Pulse Generation\Data
+%        Located here: \\cab-fs07.mae.virginia.edu\NewData\Driversiti\1CustomCode\2022 Pulse Generation\Data
 % That script outputs time, acceleration data, ROI (start/cutoff), car name, and scale factors. 
 % To process a new set of data, download IIHS data and copy time/acc
 % numbers into a template of FocusFront.m
 
-% The last section of this script saves time/scaled IIHS acceleration data as a .csv to \\cab-fs07.mae.virginia.edu\NewData\Driversiti\1TestDocs\Sfara2022\CSV Pulses
+% The last section of this script saves time/scaled IIHS acceleration data as a .csv to \\cab-fs07.mae.virginia.edu\NewData\Driversiti\1TestDocs\2022\CSV Pulses
 
 
 %% CFC 60 Filter. Change .0001 to different dT if needed
@@ -77,7 +77,7 @@ Scaling_DeltaV_Maxg = [1, scalefactors;
 % 
 % for i=1:length(scalefactors)
 %     output=[time_output,acc_output(:,i)];
-%     %filename=strcat('C:\Users\james.caldwell\OneDrive - University of Virginia\Documents\Sfara\Pulses\',car,num2str(scalefactors(i)*100),'.csv');
-%     filename=strcat('\\cab-fs07.mae.virginia.edu\NewData\Driversiti\1TestDocs\Sfara2022\CSV Pulses\',car,num2str(scalefactors(i)*100),'.csv');
+%     %filename=strcat('C:\Users\james.caldwell\OneDrive - University of Virginia\Documents\Pulses\',car,num2str(scalefactors(i)*100),'.csv');
+%     filename=strcat('\\cab-fs07.mae.virginia.edu\NewData\Driversiti\1TestDocs\2022\CSV Pulses\',car,num2str(scalefactors(i)*100),'.csv');
 %     writematrix(output,filename)
 % end
